@@ -16,8 +16,8 @@
 | `011` (`3`)   |     [Direct, x-indexed](#direct-x-indexed)|
 | `100` (`4`)   |                      [Indirect](#indirect)|
 | `101` (`5`)   | [Indirect, x-indexed](#indirect-x-indexed)|
-| `110` (`6`)   |                Illegal, treated as imlied |
-| `111` (`7`)   |                Illegal, treated as imlied |
+| `110` (`6`)   |               Illegal, treated as implied |
+| `111` (`7`)   |               Illegal, treated as implied |
 
 ### Implied
 * Implied addressing has no operands, bytes 2-3 of the instruction don't matter to the execution of the instruction.
@@ -43,4 +43,4 @@
 ### Indirect X indexed
 * Indirect x-indexed addressing is similar to indirect addressing, but the address to the operand is offset by the X register.
 * `read_addr -> add_rX -> read_operand`
-* Examples are `lda [addr,x]` and `sta[addr,x]`
+* Examples are `lda [addr],x` and `sta[addr],x`
